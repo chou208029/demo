@@ -43,6 +43,15 @@
 	  </div>
 	</div>
 	
+	<div class="container">
+		<nav aria-label="breadcrumb">
+		  <ol class="breadcrumb">
+		    <li class="breadcrumb-item"><a href="/home">Home</a></li>
+		    <li class="breadcrumb-item" aria-current="page">Information</li>
+		  </ol>
+		</nav>
+	</div>
+	
 	<div style="width: 70%">
 		<div class="container">
 			<div class="row col-md-6 mx-auto" style="margin:3%">

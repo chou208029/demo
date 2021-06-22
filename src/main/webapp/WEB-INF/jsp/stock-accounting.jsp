@@ -45,6 +45,15 @@
 	  </div>
 	</div>
 	
+	<div class="container">
+		<nav aria-label="breadcrumb">
+		  <ol class="breadcrumb">
+		    <li class="breadcrumb-item"><a href="/home">Home</a></li>
+		    <li class="breadcrumb-item" aria-current="page">Inventory and Accounting</li>
+		  </ol>
+		</nav>
+	
+	
 	<ul class="nav nav-tabs" id="myTab" role="tablist">
 	  <li class="nav-item" role="presentation">
 	    <button class="nav-link active" id="invetory-tab" data-bs-toggle="tab" data-bs-target="#inventory" type="button" role="tab" aria-controls="inventory" aria-selected="true">Inventory</button>
@@ -120,7 +129,7 @@
 	    </div>
 	  </div>
 	</div>
-
+	</div>
     <div>
 		<img id="backgroungImg" class="bottomRight" src="/images/factory.jpeg" />
 	</div>
