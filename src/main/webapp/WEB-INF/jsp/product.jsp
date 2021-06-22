@@ -1,8 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Info</title>
+<meta charset="UTF-8">
+	<title>Product</title>
 	
 	<link href="/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
 	<link href="/css/psi.css" rel="stylesheet" type="text/css"/>
@@ -10,7 +12,6 @@
 	<script type="text/javascript" src="/js/all.js"></script> <!--load all styles for fond awesome -->
 	<script type="text/javascript" src="/js/bootstrap.min.js"></script>
 </head>
-
 <script type="text/javascript">
 	$(function () {
 		$("#backward").click(function(){
@@ -23,7 +24,7 @@
 		});
 	});
 </script>
-	
+
 <body>
 
 	<div class="container" style="padding-top: 30px;">
@@ -43,21 +44,38 @@
 	  </div>
 	</div>
 	
-	<div style="width: 70%">
-		<div class="container">
-			<div class="row col-md-6 mx-auto" style="margin:3%">
-				<a class="btn btn-primary" href="/customer" role="button">客戶資料</a>
-			</div>
-			<div class="row col-md-6 mx-auto" style="margin:3%">
-				<a class="btn btn-primary" href="vendor" role="button">廠商資料</a>
-			</div>
-			<div class="row col-md-6 mx-auto" style="margin:3%">
-				<a class="btn btn-primary" href="/product" role="button">商品資料</a>
-			</div>
-		</div>
-	</div>
-	
-	<div>
+	<div class="container">
+        <table class="table table-striped">
+            <!-- <caption>Your todos are </caption> -->
+            <thead>
+                <tr>
+                	<th>Product Code</th>
+                    <th>Product Name</th>
+                    <th>Description</th>
+                    <th>Specification</th>
+                    <th>Brand</th>
+                    <th>Origin</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+            <c:forEach var="i" begin="1" end="5">
+                    <tr>
+                    	<td>D01</td>
+                        <td>Orange Juice</td>
+                        <td>Drink</td>
+                        <td>300 ml</td>
+                        <td>光泉</td>
+                      	<td>Taiwan</td>
+                        <td><a class="btn btn-primary" href="/product/edit">Edit</a>&nbsp;&nbsp;
+                        <a class="btn btn-warning" href="/product/delete">Delete</a></td>
+                    </tr>
+             </c:forEach>
+            </tbody>
+        </table>
+    </div>
+    
+    <div>
 		<img id="backgroungImg" class="bottomRight" src="/images/factory.jpeg" />
 	</div>
 </body>
